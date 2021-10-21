@@ -1,0 +1,27 @@
+{
+  "name": "WebExamenPractico2_DPAM",
+  "version": "1.0.0",
+  "description": "Segundo examen practico desarrollo web Diana Aguilar a01745778",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DianaAguilarMtz/WebExamenPractico2_DPAM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DianaAguilarMtz/WebExamenPractico2_DPAM/issues"
+  },
+  "homepage": "https://github.com/DianaAguilarMtz/WebExamenPractico2_DPAM#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
