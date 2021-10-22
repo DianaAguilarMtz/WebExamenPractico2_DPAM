@@ -14,6 +14,7 @@ exports.postAgregarLugar = async (req,res)=>{
     if (DatoRepetido === null) {
         try{
             //Agregar el documento a la colección
+            lugar.contInteres=1
             await lugar.save()
             console.log(lugar)
             console.log("Lugar registrado")
@@ -23,8 +24,13 @@ exports.postAgregarLugar = async (req,res)=>{
             res.send({operacion: "incorrecta"})
         }
     }else{
+        await Lugar.findOneAndUpdate({ 
+            lugarInteres : req.body.lugarInteres,
+            pais : req.body.pais
+        },{contInteres:DatoRepetido.contInteres+1})
         console.log("El lugar ya está registrado")
-        res.json({estado:"ya existe"})
+        res.json({estado:"ya existe, contador incrementado"})
+        
     }
 }
 
